@@ -1,4 +1,3 @@
-/* pino.overlay - 物理アドレス指定版 */
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
@@ -21,18 +20,12 @@
         compatible = "zmk,kscan-gpio-direct";
         label = "KSCAN";
         input-gpios
-            /* D0ピン = P0.02 */
-            = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            /* D1ピン = P0.03 */
-            , <&gpio0 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            /* D2ピン = P0.28 */
-            , <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            /* D3ピン = P0.29 */
-            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            /* D4ピン = P0.04 */
-            , <&gpio0 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            /* D5ピン = P0.05 */
-            , <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // D0 (要pino.conf設定)
+            , <&gpio0 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // D1 (要pino.conf設定)
+            , <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // D2
+            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // D3
+            , <&gpio0 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // D4
+            , <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // D5
             ;
     };
 };
