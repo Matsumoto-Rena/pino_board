@@ -7,9 +7,10 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            /* D2の1キーだけ物理配線されているので、一時的にbt BT_CLRを割り当ててボンドクリア用に使う */
             bindings = <
-                &kp A    &kp B    &kp C
-                &kp D    &kp E    &kp F
+                &bt BT_CLR    &kp B    &kp C
+                &kp D         &kp E    &kp F
             >;
         };
     };
